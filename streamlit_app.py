@@ -3,18 +3,6 @@ import base64
 import replicate
 import os
 
-# Access the API token from Streamlit Cloud secrets
-api_token = st.secrets["REPLICATE_API_TOKEN"]
-st.write(api_token)
-
-if api_token is None:
-    st.error("Replicate API token not found.")
-else:
-    # Set the environment variable dynamically
-    os.environ["REPLICATE_API_TOKEN"] = api_token
-
-st.write(f"Environment variable: {os.environ.get('REPLICATE_API_TOKEN')}")
-
 # Helper function to convert an image to a data URL
 def image_to_data_url(image):
     img_str = base64.b64encode(image.read()).decode()  # directly encode the file's bytes
