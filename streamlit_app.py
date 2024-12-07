@@ -1,8 +1,16 @@
 import streamlit as st
 import base64
 import replicate
+import os
 
-token = st.secrets["REPLICATE_API_TOKEN"]
+# Access the API token from Streamlit Cloud secrets
+api_token = st.secrets["REPLICATE_API_TOKEN"]
+
+if api_token is None:
+    st.error("Replicate API token not found.")
+else:
+    # Set the environment variable dynamically
+    os.environ["REPLICATE_API_TOKEN"] = api_token
 
 # Helper function to convert an image to a data URL
 def image_to_data_url(image):
