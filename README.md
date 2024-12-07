@@ -2,7 +2,7 @@
 
 ## App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://app-starter-kit.streamlit.app/](https://vizit-bfl-flux-11-pro-poc.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://vizit-bfl-flux-11-pro-poc.streamlit.app/)
 
 ## GitHub Codespaces
 
