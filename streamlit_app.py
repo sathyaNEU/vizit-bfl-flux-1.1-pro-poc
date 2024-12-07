@@ -59,7 +59,7 @@ with st.expander("**POC - Customized Background Generation**"):
                     "aspect_ratio": "1:1",
                     "image_prompt": image_data_url,
                     "output_quality": 100,
-                    "output_format": "jpg",
+                    "output_format": "png",
                     "prompt": prompt,
                     "prompt_upsampling": False,
                     "safety_tolerance": 2,
@@ -72,7 +72,7 @@ with st.expander("**POC - Customized Background Generation**"):
                 
                 # Section for Generated Image
                 st.info("**Generated Image**")
-                st.image(output, caption="Generated Image", use_column_width=True,output_format="JPEG")
+                st.image(output, caption="Generated Image", use_column_width=True,output_format="PNG")
         else:
             st.info("No image attached.")
             
