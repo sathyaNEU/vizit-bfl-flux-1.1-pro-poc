@@ -66,7 +66,15 @@ with st.expander("**POC - Customized Background Generation**"):
                 }
                 )
                 # 
-                output
+                image_url = "https://example.com/path/to/image.jpg"  # replace with your actual URL
+
+            with st.expander("Input Image"):
+                st.image(uploaded_file, caption="Input Image", use_column_width=True)                
+            
+            # Create an expander
+            with st.expander("Image Result"):
+                # Display the image from the URL
+                st.image(image_url, caption="Generated Image", use_column_width=True)
         else:
             st.info("No image attached.")
             
