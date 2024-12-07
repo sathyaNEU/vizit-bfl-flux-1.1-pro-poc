@@ -17,7 +17,7 @@ def image_to_data_url(image):
 
 st.title('Vizlit x Black Forest Labs -> Image Background Generator using GenAI techniques (FLUX)')
 
-st.info('This is a POC to test how flux 1.1-pro model works good with background variotions with respective to prompt settings')
+st.info('This is a proof of concept (POC) to evaluate how well the Flux 1.1-Pro model handles background variations based on different prompt settings.')
 st.success("You may notice that all input (feeded) images appear with reduced clarity. This is intentional, as it helps the model fine-tune the results using Flux's guidance and strictness parameters.")
 
 with st.expander("**POC - Customized Background Generation**"):
