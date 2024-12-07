@@ -3,6 +3,11 @@ import base64
 import replicate
 import os
 
+# Access the API token from Streamlit Cloud secrets
+api_token = st.secrets["REPLICATE_API_TOKEN"]
+api = replicate.Client(api_token=api_token)
+
+
 # Helper function to convert an image to a data URL
 def image_to_data_url(image):
     img_str = base64.b64encode(image.read()).decode()  # directly encode the file's bytes
@@ -48,7 +53,7 @@ with st.expander("**POC - Customized Background Generation**"):
             # st.image(uploaded_file, caption="Attached Image", use_column_width=True)
             image_data_url = image_to_data_url(uploaded_file)
             if image_to_data_url:
-                output = replicate.run(
+                output = api.run(
                 "black-forest-labs/flux-1.1-pro",
                 input={
                     "aspect_ratio": "1:1",
