@@ -80,7 +80,7 @@ with st.expander("**POC - Customized Background Generation**"):
 
 st.info('To explore some prediction results from the flux-1.1-pro model, check out the expanders below.')            
 
-with st.expander('Playground Outputs - Iphone'):
+with st.expander('**API Results - Iphone**'):
     image_path = 'images/iphone.jpg'
 
     # Using a with block to open and display the image
@@ -91,7 +91,7 @@ with st.expander('Playground Outputs - Iphone'):
     st.subheader("Generated Image")  # Subheading above the generated image
     st.image("https://replicate.delivery/czjl/oZlSUHd9RxovC53u4xXIVtNlzbpCHDWzf4rX3J5f3HsqRewnA/tmpwumvktqu.jpg", use_column_width=True)
     
-with st.expander('Playground Outputs - Drone'):
+with st.expander('**API Results - Drone**'):
     image_path = 'images/drone.jpg'
 
     # Using a with block to open and display the image
@@ -102,7 +102,7 @@ with st.expander('Playground Outputs - Drone'):
     st.subheader("Generated Image")  # Subheading above the generated image
     st.image("https://replicate.delivery/czjl/xgvAN3RWv6LiGpMakkYvsUYzC0e2iXj2ff0W8rv1epdUm4hPB/tmpjt531xlc.jpg", use_column_width=True)
     
-with st.expander('Playground Outputs - AMEX Credit Card'):
+with st.expander('**API Results - AMEX Credit Card**'):
     image_path = 'images/amex.jpg'
 
     # Using a with block to open and display the image
@@ -113,7 +113,7 @@ with st.expander('Playground Outputs - AMEX Credit Card'):
     st.subheader("Generated Image")  # Subheading above the generated image
     st.image("https://replicate.delivery/czjl/mpyQdjIQTdq5FB2Qhev5ak0yr2yK74xnE56IZTXC59YgEP8JA/tmpjzzm6u0k.jpg", use_column_width=True)
     
-with st.expander('Playground Outputs - Logitech Mouse'):
+with st.expander('**API Results - Logitech Mouse**'):
     image_path = 'images/mouse.jpg'
 
     # Using a with block to open and display the image
@@ -122,9 +122,9 @@ with st.expander('Playground Outputs - Logitech Mouse'):
         st.image(image, use_column_width=True)
     
     st.subheader("Generated Image")  # Subheading above the generated image
-    st.image("https://replicate.com/p/c2wkpeev1xrge0ckm3cs2y47xm", use_column_width=True)
+    st.image("https://replicate.delivery/czjl/JGTJCJT6uGaIAVjjrefrTbChyZGZHbWiHN0XRawvTmmXGewnA/tmpg504tka1.jpg", use_column_width=True)
     
-with st.expander('Playground Outputs - Apple MacBook'):
+with st.expander('**API Results - Apple MacBook**'):
     image_path = 'images/macbook.jpg'
 
     # Using a with block to open and display the image
