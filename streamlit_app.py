@@ -13,6 +13,8 @@ else:
     # Set the environment variable dynamically
     os.environ["REPLICATE_API_TOKEN"] = api_token
 
+st.write(f"Environment variable: {os.environ.get('REPLICATE_API_TOKEN')}")
+
 # Helper function to convert an image to a data URL
 def image_to_data_url(image):
     img_str = base64.b64encode(image.read()).decode()  # directly encode the file's bytes
