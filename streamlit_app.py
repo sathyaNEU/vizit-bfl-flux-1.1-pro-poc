@@ -1,4 +1,14 @@
 import streamlit as st
+from io import BytesIO
+import base64
+import replicate
+
+# Helper function to convert an image to a data URL
+def image_to_data_url(image):
+    buffered = BytesIO()
+    image.save(buffered, format="PNG")
+    img_str = base64.b64encode(buffered.getvalue()).decode()
+    return f"data:image/png;base64,{img_str}"
 
 st.title('Vizlit x Black Forest Labs -> Image Background Generator using GenAI techniques (FLUX)')
 
@@ -37,7 +47,23 @@ with st.expander("**POC - Customized Background Generation**"):
         # Display selected options
         st.success(f"Background generation initiated with the prompt: {prompt}")
         if uploaded_file is not None:
-            st.image(uploaded_file, caption="Attached Image", use_column_width=True)
+            # st.image(uploaded_file, caption="Attached Image", use_column_width=True)
+            image_data_url = image_to_data_url(uploaded_file)
+            if image_to_data_url:
+                output = replicate.run(
+                "black-forest-labs/flux-1.1-pro",
+                input={
+                    "aspect_ratio": "1:1",
+                    "image_prompt": image_data_url,
+                    "output_format": "jpg",
+                    "output_quality": 100,
+                    "prompt": prompt,
+                    "prompt_upsampling": False,
+                    "safety_tolerance": 2,
+                    "seed": 32
+                }
+                )
+                st.image(output, caption="Generated Background", use_column_width=True)
         else:
             st.info("No image attached.")
             
