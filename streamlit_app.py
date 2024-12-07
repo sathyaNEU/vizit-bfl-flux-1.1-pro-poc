@@ -55,7 +55,7 @@ with st.expander("**POC - Customized Background Generation**"):
             # st.image(uploaded_file, caption="Attached Image", use_column_width=True)
             image_data_url = image_to_data_url(uploaded_file)
             if image_to_data_url:
-                output = api.run(
+                output = replicate.run(
                 "black-forest-labs/flux-1.1-pro",
                 input={
                     "aspect_ratio": "1:1",
