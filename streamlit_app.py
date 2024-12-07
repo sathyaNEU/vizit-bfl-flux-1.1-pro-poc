@@ -87,20 +87,7 @@ with st.expander('Playground Outputs - Iphone - Theme 1'):
     with Image.open(image_path) as image:
         st.image(image, caption="Feeded Image", use_column_width=True)
     
-    output = api.run(
-        "black-forest-labs/flux-1.1-pro",
-        input={
-            "aspect_ratio": "1:1",
-            "image_prompt": "https://api.replicate.com/v1/files/ZmZkNWQ0ZGUtYjBkOS00OGQwLWI0Y2EtYTVkYzZhNzU5Yjk4/download?expiry=1733574775&owner=sathyaneu&signature=AeDwMzDn4YivwwccQhP%252Bv0DWDE3OnfvEnkJdZ6lel%252Fo%253D",
-            "output_format": "jpg",
-            "output_quality": 100,
-            "prompt": "Elegant studio backdrop for product photography. Soft gradient lighting, minimalist design, neutral tones with subtle texture.",
-            "prompt_upsampling": False,
-            "safety_tolerance": 2,
-            "seed": 0
-        })
-    output
-    # st.image(output.url, caption="Generated Image", use_column_width=True)
+    st.image("https://replicate.delivery/czjl/oZlSUHd9RxovC53u4xXIVtNlzbpCHDWzf4rX3J5f3HsqRewnA/tmpwumvktqu.jpg", caption="Generated Image", use_column_width=True)
     
     
 with st.expander('Playground Outputs - Theme 2'):
