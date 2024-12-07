@@ -58,7 +58,6 @@ with st.expander("**POC - Customized Background Generation**"):
                 input={
                     "aspect_ratio": "1:1",
                     "image_prompt": image_data_url,
-                    "output_format": "jpg",
                     "output_quality": 100,
                     "prompt": prompt,
                     "prompt_upsampling": False,
@@ -66,7 +65,8 @@ with st.expander("**POC - Customized Background Generation**"):
                     "seed": 32
                 }
                 )
-                st.image(output, caption="Generated Background", use_column_width=True)
+                # 
+                output
         else:
             st.info("No image attached.")
             
