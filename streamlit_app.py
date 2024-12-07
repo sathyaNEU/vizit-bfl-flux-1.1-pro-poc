@@ -87,7 +87,7 @@ with st.expander('Playground Outputs - Iphone - Theme 1'):
     with Image.open(image_path) as image:
         st.image(image, caption="Feeded Image", use_column_width=True)
     
-    output = replicate.run(
+    output = api.run(
         "black-forest-labs/flux-1.1-pro",
         input={
             "aspect_ratio": "1:1",
