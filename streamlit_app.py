@@ -59,7 +59,7 @@ with st.expander("**POC - Customized Background Generation**"):
                     "aspect_ratio": "1:1",
                     "image_prompt": image_data_url,
                     "output_quality": 100,
-                    "output_format": "jpeg",
+                    "output_format": "jpg",
                     "prompt": prompt,
                     "prompt_upsampling": False,
                     "safety_tolerance": 2,
