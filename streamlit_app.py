@@ -84,11 +84,12 @@ with st.expander('Playground Outputs - Iphone - Theme 1'):
     image_path = 'images/iphone.jpg'
 
     # Using a with block to open and display the image
+    st.subheader("Feeded Image")  # Subheading above the image
     with Image.open(image_path) as image:
-        st.image(image, caption="Feeded Image", use_column_width=True)
+        st.image(image, use_column_width=True)
     
-    st.image("https://replicate.delivery/czjl/oZlSUHd9RxovC53u4xXIVtNlzbpCHDWzf4rX3J5f3HsqRewnA/tmpwumvktqu.jpg", caption="Generated Image", use_column_width=True)
-    
+    st.subheader("Generated Image")  # Subheading above the generated image
+    st.image("https://replicate.delivery/czjl/oZlSUHd9RxovC53u4xXIVtNlzbpCHDWzf4rX3J5f3HsqRewnA/tmpwumvktqu.jpg", use_column_width=True)
     
 with st.expander('Playground Outputs - Theme 2'):
     st.write('yet to work')
