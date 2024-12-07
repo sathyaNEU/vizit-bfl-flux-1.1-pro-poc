@@ -1,13 +1,10 @@
 import streamlit as st
-from io import BytesIO
 import base64
 import replicate
 
 # Helper function to convert an image to a data URL
 def image_to_data_url(image):
-    buffered = BytesIO()
-    image.save(buffered, format="PNG")
-    img_str = base64.b64encode(buffered.getvalue()).decode()
+    img_str = base64.b64encode(image.read()).decode()  # directly encode the file's bytes
     return f"data:image/png;base64,{img_str}"
 
 st.title('Vizlit x Black Forest Labs -> Image Background Generator using GenAI techniques (FLUX)')
