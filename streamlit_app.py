@@ -98,10 +98,9 @@ with st.expander('Playground Outputs - Iphone - Theme 1'):
             "prompt_upsampling": False,
             "safety_tolerance": 2,
             "seed": 0
-        }
+        })
     st.image(output.url, caption="Generated Image", use_column_width=True)
     
-)
     
 with st.expander('Playground Outputs - Theme 2'):
     st.write('yet to work')
