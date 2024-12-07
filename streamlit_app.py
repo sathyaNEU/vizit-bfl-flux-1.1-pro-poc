@@ -74,7 +74,7 @@ with st.expander("**POC - Customized Background Generation**"):
                 st.info("**Generated Image**")
                 st.write(output)
                 st.write(type(output))
-                st.image(output, caption="Generated Image", use_column_width=True,output_format="auto")
+                st.image(output.url, caption="Generated Image", use_column_width=True)
         else:
             st.info("No image attached.")
             
