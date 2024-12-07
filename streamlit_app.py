@@ -4,7 +4,7 @@ st.title('Vizlit x Black Forest Labs -> Image Background Generator using GenAI t
 
 st.info('This is a POC to test how flux 1.1-pro model works good with background variotions with respective to prompt settings')
 
-with st.expander("POC - Customized Background Generation"):
+with st.expander("**POC - Customized Background Generation**"):
     # Predefined prompts
     predefined_prompts = [
         "Dimly lit, moody environment with deep shadows and a hint of fog. Rich colors create an atmosphere of mystery and intrigue, perfect for dramatic product photography.",
@@ -41,5 +41,5 @@ with st.expander("POC - Customized Background Generation"):
         else:
             st.info("No image attached.")
             
-    with st.expander('Playground Outputs'):
-        st.write('yet to work')
+with st.expander('Playground Outputs'):
+    st.write('yet to work')
