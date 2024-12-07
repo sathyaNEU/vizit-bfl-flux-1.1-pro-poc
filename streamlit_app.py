@@ -87,7 +87,7 @@ with st.expander('Playground Outputs - Iphone - Theme 1'):
     with Image.open(image_path) as image:
         st.image(image, caption="Feeded Image", use_column_width=True)
     
-    output = replicate.run(
+    output = api.run(
         "black-forest-labs/flux-1.1-pro",
         input={
             "aspect_ratio": "1:1",
@@ -99,7 +99,8 @@ with st.expander('Playground Outputs - Iphone - Theme 1'):
             "safety_tolerance": 2,
             "seed": 0
         })
-    st.image(output.url, caption="Generated Image", use_column_width=True)
+    output
+    # st.image(output.url, caption="Generated Image", use_column_width=True)
     
     
 with st.expander('Playground Outputs - Theme 2'):
