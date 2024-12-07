@@ -5,6 +5,7 @@ import os
 
 # Access the API token from Streamlit Cloud secrets
 api_token = st.secrets["REPLICATE_API_TOKEN"]
+st.write(api_token)
 
 if api_token is None:
     st.error("Replicate API token not found.")
