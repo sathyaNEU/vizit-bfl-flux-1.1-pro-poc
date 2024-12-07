@@ -2,6 +2,8 @@ import streamlit as st
 import base64
 import replicate
 import os
+from PIL import Image
+
 
 # Access the API token from Streamlit Cloud secrets
 api_token = st.secrets["REPLICATE_API_TOKEN"]
@@ -72,11 +74,34 @@ with st.expander("**POC - Customized Background Generation**"):
                 
                 # Section for Generated Image
                 st.info("**Generated Image**")
-                st.write(output)
-                st.write(type(output))
                 st.image(output.url, caption="Generated Image", use_column_width=True)
         else:
             st.info("No image attached.")
-            
-with st.expander('Playground Outputs'):
+
+st.info('To explore some prediction results from the flux-1.1-pro model, check out the expanders below.')            
+
+with st.expander('Playground Outputs - Iphone - Theme 1'):
+    image_path = 'images/iphone.jpg'
+
+    # Using a with block to open and display the image
+    with Image.open(image_path) as image:
+        st.image(image, caption="Feeded Image", use_column_width=True)
+    
+    output = replicate.run(
+        "black-forest-labs/flux-1.1-pro",
+        input={
+            "aspect_ratio": "1:1",
+            "image_prompt": "https://api.replicate.com/v1/files/ZmZkNWQ0ZGUtYjBkOS00OGQwLWI0Y2EtYTVkYzZhNzU5Yjk4/download?expiry=1733574775&owner=sathyaneu&signature=AeDwMzDn4YivwwccQhP%252Bv0DWDE3OnfvEnkJdZ6lel%252Fo%253D",
+            "output_format": "jpg",
+            "output_quality": 100,
+            "prompt": "Elegant studio backdrop for product photography. Soft gradient lighting, minimalist design, neutral tones with subtle texture.",
+            "prompt_upsampling": False,
+            "safety_tolerance": 2,
+            "seed": 0
+        }
+    st.image(output.url, caption="Generated Image", use_column_width=True)
+    
+)
+    
+with st.expander('Playground Outputs - Theme 2'):
     st.write('yet to work')
