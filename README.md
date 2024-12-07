@@ -1,4 +1,4 @@
-# 📦 Streamlit App For Image Background Generation using Flux Model 
+## 📦 Streamlit App For Image Background Generation using Flux Model 
 
 ## App
 
