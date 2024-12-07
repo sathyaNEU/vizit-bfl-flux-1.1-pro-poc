@@ -2,6 +2,8 @@ import streamlit as st
 import base64
 import replicate
 
+token = st.secrets["REPLICATE_API_TOKEN"]
+
 # Helper function to convert an image to a data URL
 def image_to_data_url(image):
     img_str = base64.b64encode(image.read()).decode()  # directly encode the file's bytes
